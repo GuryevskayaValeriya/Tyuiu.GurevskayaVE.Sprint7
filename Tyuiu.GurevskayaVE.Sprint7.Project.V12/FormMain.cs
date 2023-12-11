@@ -48,22 +48,22 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             try
             {
                 DataRow dr = null;
-                string[] carValues = null;
-                string[] cars = File.ReadAllLines(pathToCsvFile);
-                for (int i = 0; i < cars.Length; i++)
+                string[] ivmValues = null;
+                string[] ivm = File.ReadAllLines(pathToCsvFile);
+                for (int i = 0; i < ivm.Length; i++)
                 {
-                    if (!String.IsNullOrEmpty(cars[i]))
+                    if (!String.IsNullOrEmpty(ivm[i]))
                     {
-                        carValues = cars[i].Split(';');
+                        ivmValues = ivm[i].Split(';');
                         //создаём новую строку
                         dr = dt.NewRow();
-                        dr["ЭВМ"] = carValues[0];
-                        dr["Фирма"] = carValues[1];
-                        dr["Процессор"] = carValues[2];
-                        dr["Количество ядер"] = int.Parse(carValues[3]);
-                        dr["Объем ОЗУ"] = int.Parse(carValues[4]);
-                        dr["Диагональ"] = Double.Parse(carValues[5]);
-                        dr["Дата выпуска"] = int.Parse(carValues[6]);
+                        dr["ЭВМ"] = ivmValues[0];
+                        dr["Фирма"] = ivmValues[1];
+                        dr["Процессор"] = ivmValues[2];
+                        dr["Количество ядер"] = int.Parse(ivmValues[3]);
+                        dr["Объем ОЗУ"] = int.Parse(ivmValues[4]);
+                        dr["Диагональ"] = Double.Parse(ivmValues[5]);
+                        dr["Дата выпуска"] = int.Parse(ivmValues[6]);
                         //добавляем строку в таблицу
                         dt.Rows.Add(dr);
                     }
