@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="Resources\222.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib\Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib.csproj">
+      <Project>{f168db11-0312-4e86-8bc8-d2cf6d2ebf35}</Project>
+      <Name>Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
