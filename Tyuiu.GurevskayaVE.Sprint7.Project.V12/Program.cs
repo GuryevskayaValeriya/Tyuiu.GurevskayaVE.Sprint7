@@ -16,7 +16,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAbout());
+            Application.Run(new FormMain());
         }
     }
 }

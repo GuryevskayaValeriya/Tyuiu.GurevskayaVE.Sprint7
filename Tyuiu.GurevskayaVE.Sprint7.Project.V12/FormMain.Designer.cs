@@ -4,14 +4,14 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
     partial class FormMain
     {
         /// <summary>
-        /// Required designer variable.
+        /// Обязательная переменная конструктора.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Освободить все используемые ресурсы.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,81 +21,109 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Код, автоматически созданный конструктором форм Windows
 
         /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// Требуемый метод для поддержки конструктора — не изменяйте 
+        /// содержимое этого метода с помощью редактора кода.
         /// </summary>
         private void InitializeComponent()
         {
             this.panelTop = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.buttonOpen_GVE = new System.Windows.Forms.Button();
             this.buttonInfo_GVE = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.groupBoxIn_GVE = new System.Windows.Forms.GroupBox();
+            this.dataGridViewIn_GVE = new System.Windows.Forms.DataGridView();
+            this.saveFileDialog_GVE = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog_GVE = new System.Windows.Forms.OpenFileDialog();
             this.panelTop.SuspendLayout();
+            this.panelLeft.SuspendLayout();
+            this.groupBoxIn_GVE.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIn_GVE)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
             // 
-            this.panelTop.Controls.Add(this.button4);
-            this.panelTop.Controls.Add(this.button3);
+            this.panelTop.Controls.Add(this.buttonOpen_GVE);
             this.panelTop.Controls.Add(this.buttonInfo_GVE);
-            this.panelTop.Controls.Add(this.button1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1089, 135);
+            this.panelTop.Size = new System.Drawing.Size(1086, 103);
             this.panelTop.TabIndex = 0;
             // 
-            // button1
+            // panelLeft
             // 
-            this.button1.Location = new System.Drawing.Point(13, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.panelLeft.Controls.Add(this.groupBoxIn_GVE);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 103);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(837, 488);
+            this.panelLeft.TabIndex = 1;
+            // 
+            // buttonOpen_GVE
+            // 
+            this.buttonOpen_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.folder_add;
+            this.buttonOpen_GVE.Location = new System.Drawing.Point(13, 13);
+            this.buttonOpen_GVE.Name = "buttonOpen_GVE";
+            this.buttonOpen_GVE.Size = new System.Drawing.Size(75, 75);
+            this.buttonOpen_GVE.TabIndex = 1;
+            this.buttonOpen_GVE.UseVisualStyleBackColor = true;
+            this.buttonOpen_GVE.Click += new System.EventHandler(this.buttonOpen_GVE_Click);
             // 
             // buttonInfo_GVE
             // 
+            this.buttonInfo_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonInfo_GVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonInfo_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.information;
-            this.buttonInfo_GVE.Location = new System.Drawing.Point(977, 12);
+            this.buttonInfo_GVE.Location = new System.Drawing.Point(999, 12);
             this.buttonInfo_GVE.Name = "buttonInfo_GVE";
-            this.buttonInfo_GVE.Size = new System.Drawing.Size(100, 75);
-            this.buttonInfo_GVE.TabIndex = 1;
+            this.buttonInfo_GVE.Size = new System.Drawing.Size(75, 75);
+            this.buttonInfo_GVE.TabIndex = 0;
             this.buttonInfo_GVE.UseVisualStyleBackColor = true;
             this.buttonInfo_GVE.Click += new System.EventHandler(this.buttonInfo_GVE_Click);
             // 
-            // button3
+            // groupBoxIn_GVE
             // 
-            this.button3.Location = new System.Drawing.Point(107, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.groupBoxIn_GVE.Controls.Add(this.dataGridViewIn_GVE);
+            this.groupBoxIn_GVE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxIn_GVE.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxIn_GVE.Name = "groupBoxIn_GVE";
+            this.groupBoxIn_GVE.Size = new System.Drawing.Size(837, 488);
+            this.groupBoxIn_GVE.TabIndex = 0;
+            this.groupBoxIn_GVE.TabStop = false;
+            this.groupBoxIn_GVE.Text = "Ввод данных";
             // 
-            // button4
+            // dataGridViewIn_GVE
             // 
-            this.button4.Location = new System.Drawing.Point(211, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.dataGridViewIn_GVE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewIn_GVE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewIn_GVE.Location = new System.Drawing.Point(3, 18);
+            this.dataGridViewIn_GVE.Name = "dataGridViewIn_GVE";
+            this.dataGridViewIn_GVE.RowHeadersWidth = 51;
+            this.dataGridViewIn_GVE.RowTemplate.Height = 24;
+            this.dataGridViewIn_GVE.Size = new System.Drawing.Size(831, 467);
+            this.dataGridViewIn_GVE.TabIndex = 0;
             // 
-            // FormAbout
+            // openFileDialog_GVE
+            // 
+            this.openFileDialog_GVE.FileName = "openFileDialog1";
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1089, 535);
+            this.ClientSize = new System.Drawing.Size(1086, 591);
+            this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelTop);
-            this.Name = "FormAbout";
+            this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Спринт 7 | Проект | Вариант 12 | Гурьевская В.Е.";
             this.panelTop.ResumeLayout(false);
+            this.panelLeft.ResumeLayout(false);
+            this.groupBoxIn_GVE.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIn_GVE)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -103,9 +131,13 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         #endregion
 
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonInfo_GVE;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Button buttonOpen_GVE;
+        private System.Windows.Forms.GroupBox groupBoxIn_GVE;
+        private System.Windows.Forms.DataGridView dataGridViewIn_GVE;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog_GVE;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_GVE;
     }
 }
+

@@ -4,14 +4,14 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
     partial class FormAbout
     {
         /// <summary>
-        /// Обязательная переменная конструктора.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -21,11 +21,11 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Требуемый метод для поддержки конструктора — не изменяйте 
-        /// содержимое этого метода с помощью редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -38,7 +38,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // label_GVE
             // 
             this.label_GVE.AutoSize = true;
-            this.label_GVE.Location = new System.Drawing.Point(150, 9);
+            this.label_GVE.Location = new System.Drawing.Point(150, 12);
             this.label_GVE.Name = "label_GVE";
             this.label_GVE.Size = new System.Drawing.Size(363, 119);
             this.label_GVE.TabIndex = 2;
@@ -48,7 +48,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             // buttonClose_GVE
             // 
-            this.buttonClose_GVE.Location = new System.Drawing.Point(363, 147);
+            this.buttonClose_GVE.Location = new System.Drawing.Point(365, 147);
             this.buttonClose_GVE.Name = "buttonClose_GVE";
             this.buttonClose_GVE.Size = new System.Drawing.Size(148, 42);
             this.buttonClose_GVE.TabIndex = 4;
@@ -59,9 +59,9 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources._222;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(132, 180);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 177);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -69,11 +69,12 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 211);
+            this.ClientSize = new System.Drawing.Size(525, 201);
             this.Controls.Add(this.buttonClose_GVE);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_GVE);
             this.Name = "FormAbout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "О программе";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -88,4 +89,3 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         private System.Windows.Forms.Button buttonClose_GVE;
     }
 }
-

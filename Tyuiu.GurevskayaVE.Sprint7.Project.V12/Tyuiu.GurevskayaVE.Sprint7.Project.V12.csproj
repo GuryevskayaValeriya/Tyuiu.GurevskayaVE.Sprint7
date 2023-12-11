@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CECFF425-396A-4017-8D61-5B32E3C5A3BD}</ProjectGuid>
+    <ProjectGuid>{81465218-0D70-40F1-B7EB-AA20CDDC6B82}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Tyuiu.GurevskayaVE.Sprint7.Project.V12</RootNamespace>
     <AssemblyName>Tyuiu.GurevskayaVE.Sprint7.Project.V12</AssemblyName>
@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAbout.Designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,13 +93,10 @@
     <None Include="Resources\information.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\222.jpg" />
+    <None Include="Resources\folder_add.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib\Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib.csproj">
-      <Project>{f168db11-0312-4e86-8bc8-d2cf6d2ebf35}</Project>
-      <Name>Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib</Name>
-    </ProjectReference>
+    <None Include="Resources\222.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
