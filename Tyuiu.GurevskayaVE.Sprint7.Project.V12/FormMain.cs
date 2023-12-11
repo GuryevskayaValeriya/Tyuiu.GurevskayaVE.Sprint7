@@ -78,7 +78,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         private void buttonOpen_GVE_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_GVE.DataSource = ReadCSVFile(@"C:\Users\ВАЛЕРИЯ 2004\Desktop\OutPutEC_Sprint7.csv");
+            dataGridViewIn_GVE.DataSource = ReadCSVFile(@"C:\Users\ВАЛЕРИЯ 2004\source\repos\Tyuiu.GurevskayaVE.Sprint7\Tyuiu.GurevskayaVE.Sprint7.Project.V12\bin\Debug\OutPutEC_Sprint7.csv");
         }
 
         private void buttonInfo_GVE_Click(object sender, EventArgs e)
