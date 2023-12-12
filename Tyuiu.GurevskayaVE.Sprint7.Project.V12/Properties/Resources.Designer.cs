@@ -73,6 +73,16 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap application_form_magnify {
+            get {
+                object obj = ResourceManager.GetObject("application_form_magnify", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap folder_add {
             get {
                 object obj = ResourceManager.GetObject("folder_add", resourceCulture);

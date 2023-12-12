@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tt", "tt", "{B6F8EC5D-1854-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.GurevskayaVE.Sprint7.Project.V12", "Tyuiu.GurevskayaVE.Sprint7.Project.V12\Tyuiu.GurevskayaVE.Sprint7.Project.V12.csproj", "{81465218-0D70-40F1-B7EB-AA20CDDC6B82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib", "Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib\Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib.csproj", "{DB379DA6-5C3C-44A8-8160-18EC67B42955}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.GurevskayaVE.Sprint7.Project.V12.test", "Tyuiu.GurevskayaVE.Sprint7.Project.V12.test\Tyuiu.GurevskayaVE.Sprint7.Project.V12.test.csproj", "{3C8ACE1C-27FE-4148-A9E9-2CC309B6960F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,22 @@ Global
 		{81465218-0D70-40F1-B7EB-AA20CDDC6B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81465218-0D70-40F1-B7EB-AA20CDDC6B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81465218-0D70-40F1-B7EB-AA20CDDC6B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB379DA6-5C3C-44A8-8160-18EC67B42955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB379DA6-5C3C-44A8-8160-18EC67B42955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB379DA6-5C3C-44A8-8160-18EC67B42955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB379DA6-5C3C-44A8-8160-18EC67B42955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C8ACE1C-27FE-4148-A9E9-2CC309B6960F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C8ACE1C-27FE-4148-A9E9-2CC309B6960F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C8ACE1C-27FE-4148-A9E9-2CC309B6960F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C8ACE1C-27FE-4148-A9E9-2CC309B6960F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{81465218-0D70-40F1-B7EB-AA20CDDC6B82} = {B6F8EC5D-1854-42BE-B73E-3CA7E4E844D8}
+		{DB379DA6-5C3C-44A8-8160-18EC67B42955} = {B6F8EC5D-1854-42BE-B73E-3CA7E4E844D8}
+		{3C8ACE1C-27FE-4148-A9E9-2CC309B6960F} = {B6F8EC5D-1854-42BE-B73E-3CA7E4E844D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {816FE8CA-EAAE-47B5-BA34-6CFDC5CF37E7}

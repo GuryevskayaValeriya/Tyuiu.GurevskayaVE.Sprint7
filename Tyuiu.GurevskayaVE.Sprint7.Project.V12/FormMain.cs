@@ -16,6 +16,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         public FormMain()
         {
             InitializeComponent();
+
         }
 
         static string openFilePath;
@@ -38,7 +39,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             DataColumn colYAD;
             colYAD = new DataColumn("Количество ядер", typeof(Int32));
             DataColumn colOZ;
-            colOZ = new DataColumn("Объем ОЗУ", typeof(Int32));
+            colOZ = new DataColumn("Объем ОЗУ (ГБ)", typeof(Int32));
             DataColumn colDIAG;
             colDIAG = new DataColumn("Диагональ", typeof(Double));
             DataColumn colYear;
@@ -61,7 +62,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
                         dr["Фирма"] = ivmValues[1];
                         dr["Процессор"] = ivmValues[2];
                         dr["Количество ядер"] = int.Parse(ivmValues[3]);
-                        dr["Объем ОЗУ"] = int.Parse(ivmValues[4]);
+                        dr["Объем ОЗУ (ГБ)"] = int.Parse(ivmValues[4]);
                         dr["Диагональ"] = Double.Parse(ivmValues[5]);
                         dr["Дата выпуска"] = int.Parse(ivmValues[6]);
                         //добавляем строку в таблицу
@@ -85,6 +86,17 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         {
             FormAbout formabout = new FormAbout();
             formabout.ShowDialog();
+        }
+
+        private void textBoxFind_GVE_TextChanged(object sender, EventArgs e)
+        {
+            (dataGridViewIn_GVE.DataSource as DataTable).DefaultView.RowFilter = $"ЭВМ LIKE '%{textBoxFind_GVE.Text}%'";
+        }
+
+        private void buttonStat_GVE_Click(object sender, EventArgs e)
+        {
+            FormStat formstat = new FormStat();
+            formstat.ShowDialog();
         }
     }
 }
