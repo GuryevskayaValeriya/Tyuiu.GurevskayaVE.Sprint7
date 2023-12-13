@@ -33,10 +33,10 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelLeft_GVE = new System.Windows.Forms.Panel();
+            this.buttonDiag_GVE = new System.Windows.Forms.Button();
             this.buttonSredOZU_GVE = new System.Windows.Forms.Button();
             this.textBoxSredOZU_GVE = new System.Windows.Forms.TextBox();
             this.chartDiag_GVE = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.buttonDiag_GVE = new System.Windows.Forms.Button();
             this.panelLeft_GVE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDiag_GVE)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,17 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.panelLeft_GVE.Name = "panelLeft_GVE";
             this.panelLeft_GVE.Size = new System.Drawing.Size(134, 603);
             this.panelLeft_GVE.TabIndex = 0;
+            // 
+            // buttonDiag_GVE
+            // 
+            this.buttonDiag_GVE.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonDiag_GVE.Location = new System.Drawing.Point(13, 184);
+            this.buttonDiag_GVE.Name = "buttonDiag_GVE";
+            this.buttonDiag_GVE.Size = new System.Drawing.Size(105, 94);
+            this.buttonDiag_GVE.TabIndex = 1;
+            this.buttonDiag_GVE.Text = "Диагонали ЭВМ";
+            this.buttonDiag_GVE.UseVisualStyleBackColor = false;
+            this.buttonDiag_GVE.Click += new System.EventHandler(this.buttonDiag_GVE_Click);
             // 
             // buttonSredOZU_GVE
             // 
@@ -66,6 +77,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             // textBoxSredOZU_GVE
             // 
+            this.textBoxSredOZU_GVE.BackColor = System.Drawing.Color.MediumAquamarine;
             this.textBoxSredOZU_GVE.Location = new System.Drawing.Point(149, 48);
             this.textBoxSredOZU_GVE.Name = "textBoxSredOZU_GVE";
             this.textBoxSredOZU_GVE.ReadOnly = true;
@@ -74,12 +86,14 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             // chartDiag_GVE
             // 
+            this.chartDiag_GVE.BackColor = System.Drawing.Color.LightSkyBlue;
             chartArea1.Name = "ChartArea1";
             this.chartDiag_GVE.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartDiag_GVE.Legends.Add(legend1);
             this.chartDiag_GVE.Location = new System.Drawing.Point(149, 129);
             this.chartDiag_GVE.Name = "chartDiag_GVE";
+            this.chartDiag_GVE.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
             series1.IsVisibleInLegend = false;
             series1.Legend = "Legend1";
@@ -87,17 +101,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.chartDiag_GVE.Series.Add(series1);
             this.chartDiag_GVE.Size = new System.Drawing.Size(410, 289);
             this.chartDiag_GVE.TabIndex = 2;
-            // 
-            // buttonDiag_GVE
-            // 
-            this.buttonDiag_GVE.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buttonDiag_GVE.Location = new System.Drawing.Point(13, 184);
-            this.buttonDiag_GVE.Name = "buttonDiag_GVE";
-            this.buttonDiag_GVE.Size = new System.Drawing.Size(105, 94);
-            this.buttonDiag_GVE.TabIndex = 1;
-            this.buttonDiag_GVE.Text = "Диагонали ЭВМ";
-            this.buttonDiag_GVE.UseVisualStyleBackColor = false;
-            this.buttonDiag_GVE.Click += new System.EventHandler(this.buttonDiag_GVE_Click);
             // 
             // FormStat
             // 

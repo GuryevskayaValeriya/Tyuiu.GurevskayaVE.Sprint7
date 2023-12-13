@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
+using Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib;
 
 namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 {
@@ -79,7 +80,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         private void buttonOpen_GVE_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_GVE.DataSource = ReadCSVFile(@"C:\Users\ВАЛЕРИЯ 2004\source\repos\Tyuiu.GurevskayaVE.Sprint7\Tyuiu.GurevskayaVE.Sprint7.Project.V12\bin\Debug\OutPutEC_Sprint7.csv");
+            dataGridViewIn_GVE.DataSource = ReadCSVFile(@"C:\Users\ВАЛЕРИЯ 2004\source\repos\Tyuiu.GurevskayaVE.Sprint7\Tyuiu.GurevskayaVE.Sprint7.Project.V12\bin\Debug\InPutEC_Sprint7.csv");
         }
 
         private void buttonInfo_GVE_Click(object sender, EventArgs e)
@@ -90,7 +91,14 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         private void textBoxFind_GVE_TextChanged(object sender, EventArgs e)
         {
-            (dataGridViewIn_GVE.DataSource as DataTable).DefaultView.RowFilter = $"ЭВМ LIKE '%{textBoxFind_GVE.Text}%'";
+            try
+            {
+                (dataGridViewIn_GVE.DataSource as DataTable).DefaultView.RowFilter = $"ЭВМ LIKE '%{textBoxFind_GVE.Text}%'";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonStat_GVE_Click(object sender, EventArgs e)
@@ -98,5 +106,64 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             FormStat formstat = new FormStat();
             formstat.ShowDialog();
         }
+
+        private void buttonSortAlp_GVE_Click(object sender, EventArgs e)
+        {
+            this.dataGridViewIn_GVE.Sort(this.dataGridViewIn_GVE.Columns["ЭВМ"], ListSortDirection.Ascending);
+        }
+
+        private void buttonSortData_GVE_Click(object sender, EventArgs e)
+        {
+            this.dataGridViewIn_GVE.Sort(this.dataGridViewIn_GVE.Columns["Дата выпуска"], ListSortDirection.Ascending);
+        }
+
+        private void buttonSave_GVE_Click(object sender, EventArgs e)
+        {
+            saveFileDialog_GVE.FileName = "OutPutIVM.csv";
+            saveFileDialog_GVE.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialog_GVE.ShowDialog();
+
+            string path = saveFileDialog_GVE.FileName;
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            if (fileExists)
+            {
+                File.Delete(path);
+            }
+
+            int rows = dataGridViewIn_GVE.RowCount;
+            int columns = dataGridViewIn_GVE.ColumnCount;
+
+            string str = "";
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (j != columns - 1)
+                    {
+                        str = str + dataGridViewIn_GVE.Rows[i].Cells[j].Value + ";";
+                    }
+                    else
+                    {
+                        str = str + dataGridViewIn_GVE.Rows[i].Cells[j].Value;
+                    }
+                }
+                File.AppendAllText(path, str + Environment.NewLine);
+                str = "";
+            }
+
+            DialogResult dialogres = MessageBox.Show("Файл " + path + " сохранен успешно!\nОткрыть его в блокноте?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+            if (dialogres == DialogResult.Yes)
+            {
+                System.Diagnostics.Process txt = new System.Diagnostics.Process();
+                txt.StartInfo.FileName = "notepad.exe";
+                txt.StartInfo.Arguments = path;
+                txt.Start();
+            }
+        }
+
+        
     }
 }

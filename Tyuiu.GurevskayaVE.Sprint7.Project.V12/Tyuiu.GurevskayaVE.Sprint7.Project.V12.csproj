@@ -111,5 +111,11 @@
   <ItemGroup>
     <None Include="Resources\application_form_magnify.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib\Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib.csproj">
+      <Project>{db379da6-5c3c-44a8-8160-18ec67b42955}</Project>
+      <Name>Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
