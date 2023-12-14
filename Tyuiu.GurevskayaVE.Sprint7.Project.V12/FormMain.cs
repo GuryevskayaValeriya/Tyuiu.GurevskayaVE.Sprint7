@@ -24,7 +24,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         static int rows;
         static int colums;
 
-        //DataService ds = new DataService();
         //метод чтения данных из файла
         private DataTable ReadCSVFile(string pathToCsvFile)
         {
@@ -164,6 +163,10 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             }
         }
 
-        
+        private void buttonFirma_GVE_Click(object sender, EventArgs e)
+        {
+            FormFirma formfirma = new FormFirma();
+            formfirma.ShowDialog();
+        }
     }
 }

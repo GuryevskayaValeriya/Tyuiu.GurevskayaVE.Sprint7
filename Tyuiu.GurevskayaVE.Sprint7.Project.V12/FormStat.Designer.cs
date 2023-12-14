@@ -29,16 +29,19 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelLeft_GVE = new System.Windows.Forms.Panel();
             this.buttonDiag_GVE = new System.Windows.Forms.Button();
             this.buttonSredOZU_GVE = new System.Windows.Forms.Button();
             this.textBoxSredOZU_GVE = new System.Windows.Forms.TextBox();
             this.chartDiag_GVE = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridViewInStat_GVE = new System.Windows.Forms.DataGridView();
+            this.openFileDialogStat_GVE = new System.Windows.Forms.OpenFileDialog();
             this.panelLeft_GVE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDiag_GVE)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInStat_GVE)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLeft_GVE
@@ -87,34 +90,53 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // chartDiag_GVE
             // 
             this.chartDiag_GVE.BackColor = System.Drawing.Color.LightSkyBlue;
-            chartArea1.Name = "ChartArea1";
-            this.chartDiag_GVE.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartDiag_GVE.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chartDiag_GVE.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartDiag_GVE.Legends.Add(legend4);
             this.chartDiag_GVE.Location = new System.Drawing.Point(149, 129);
             this.chartDiag_GVE.Name = "chartDiag_GVE";
             this.chartDiag_GVE.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartDiag_GVE.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.IsVisibleInLegend = false;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartDiag_GVE.Series.Add(series4);
             this.chartDiag_GVE.Size = new System.Drawing.Size(410, 289);
             this.chartDiag_GVE.TabIndex = 2;
+            // 
+            // dataGridViewInStat_GVE
+            // 
+            this.dataGridViewInStat_GVE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewInStat_GVE.Location = new System.Drawing.Point(478, 12);
+            this.dataGridViewInStat_GVE.Name = "dataGridViewInStat_GVE";
+            this.dataGridViewInStat_GVE.RowHeadersWidth = 51;
+            this.dataGridViewInStat_GVE.RowTemplate.Height = 24;
+            this.dataGridViewInStat_GVE.Size = new System.Drawing.Size(169, 94);
+            this.dataGridViewInStat_GVE.TabIndex = 3;
+            this.dataGridViewInStat_GVE.Visible = false;
+            // 
+            // openFileDialogStat_GVE
+            // 
+            this.openFileDialogStat_GVE.FileName = "openFileDialog1";
             // 
             // FormStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 603);
+            this.Controls.Add(this.dataGridViewInStat_GVE);
             this.Controls.Add(this.chartDiag_GVE);
             this.Controls.Add(this.textBoxSredOZU_GVE);
             this.Controls.Add(this.panelLeft_GVE);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormStat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Статистические данные";
             this.panelLeft_GVE.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartDiag_GVE)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInStat_GVE)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +149,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         private System.Windows.Forms.TextBox textBoxSredOZU_GVE;
         private System.Windows.Forms.Button buttonDiag_GVE;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDiag_GVE;
+        private System.Windows.Forms.DataGridView dataGridViewInStat_GVE;
+        private System.Windows.Forms.OpenFileDialog openFileDialogStat_GVE;
     }
 }
