@@ -73,6 +73,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.Controls.Add(this.buttonClose_GVE);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_GVE);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "О программе";

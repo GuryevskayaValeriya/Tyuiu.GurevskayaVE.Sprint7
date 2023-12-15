@@ -64,10 +64,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         }
 
-        private void FormFirma_Load(object sender, EventArgs e)
-        {
-            //
-        }
+        
 
         private void buttonBrowser_GVE_Click(object sender, EventArgs e)
         {
