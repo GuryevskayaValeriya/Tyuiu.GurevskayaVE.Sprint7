@@ -29,9 +29,9 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelLeft_GVE = new System.Windows.Forms.Panel();
             this.buttonDiag_GVE = new System.Windows.Forms.Button();
             this.buttonSredOZU_GVE = new System.Windows.Forms.Button();
@@ -39,6 +39,8 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.chartDiag_GVE = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewInStat_GVE = new System.Windows.Forms.DataGridView();
             this.openFileDialogStat_GVE = new System.Windows.Forms.OpenFileDialog();
+            this.buttonBigYadra_GVE = new System.Windows.Forms.Button();
+            this.textBoxYadra_GVE = new System.Windows.Forms.TextBox();
             this.panelLeft_GVE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDiag_GVE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInStat_GVE)).BeginInit();
@@ -46,18 +48,19 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             // panelLeft_GVE
             // 
+            this.panelLeft_GVE.Controls.Add(this.buttonBigYadra_GVE);
             this.panelLeft_GVE.Controls.Add(this.buttonDiag_GVE);
             this.panelLeft_GVE.Controls.Add(this.buttonSredOZU_GVE);
             this.panelLeft_GVE.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_GVE.Location = new System.Drawing.Point(0, 0);
             this.panelLeft_GVE.Name = "panelLeft_GVE";
-            this.panelLeft_GVE.Size = new System.Drawing.Size(134, 603);
+            this.panelLeft_GVE.Size = new System.Drawing.Size(134, 605);
             this.panelLeft_GVE.TabIndex = 0;
             // 
             // buttonDiag_GVE
             // 
             this.buttonDiag_GVE.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buttonDiag_GVE.Location = new System.Drawing.Point(13, 184);
+            this.buttonDiag_GVE.Location = new System.Drawing.Point(12, 215);
             this.buttonDiag_GVE.Name = "buttonDiag_GVE";
             this.buttonDiag_GVE.Size = new System.Drawing.Size(105, 94);
             this.buttonDiag_GVE.TabIndex = 1;
@@ -90,18 +93,18 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // chartDiag_GVE
             // 
             this.chartDiag_GVE.BackColor = System.Drawing.Color.LightSkyBlue;
-            chartArea4.Name = "ChartArea1";
-            this.chartDiag_GVE.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartDiag_GVE.Legends.Add(legend4);
+            chartArea1.Name = "ChartArea1";
+            this.chartDiag_GVE.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartDiag_GVE.Legends.Add(legend1);
             this.chartDiag_GVE.Location = new System.Drawing.Point(149, 129);
             this.chartDiag_GVE.Name = "chartDiag_GVE";
             this.chartDiag_GVE.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series4.ChartArea = "ChartArea1";
-            series4.IsVisibleInLegend = false;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartDiag_GVE.Series.Add(series4);
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartDiag_GVE.Series.Add(series1);
             this.chartDiag_GVE.Size = new System.Drawing.Size(410, 289);
             this.chartDiag_GVE.TabIndex = 2;
             // 
@@ -120,11 +123,32 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             this.openFileDialogStat_GVE.FileName = "openFileDialog1";
             // 
+            // buttonBigYadra_GVE
+            // 
+            this.buttonBigYadra_GVE.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.buttonBigYadra_GVE.Location = new System.Drawing.Point(12, 452);
+            this.buttonBigYadra_GVE.Name = "buttonBigYadra_GVE";
+            this.buttonBigYadra_GVE.Size = new System.Drawing.Size(105, 98);
+            this.buttonBigYadra_GVE.TabIndex = 2;
+            this.buttonBigYadra_GVE.Text = "Самое большое количество ядер";
+            this.buttonBigYadra_GVE.UseVisualStyleBackColor = false;
+            this.buttonBigYadra_GVE.Click += new System.EventHandler(this.buttonBigYadra_GVE_Click);
+            // 
+            // textBoxYadra_GVE
+            // 
+            this.textBoxYadra_GVE.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.textBoxYadra_GVE.Location = new System.Drawing.Point(161, 490);
+            this.textBoxYadra_GVE.Name = "textBoxYadra_GVE";
+            this.textBoxYadra_GVE.ReadOnly = true;
+            this.textBoxYadra_GVE.Size = new System.Drawing.Size(100, 22);
+            this.textBoxYadra_GVE.TabIndex = 4;
+            // 
             // FormStat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 603);
+            this.ClientSize = new System.Drawing.Size(659, 605);
+            this.Controls.Add(this.textBoxYadra_GVE);
             this.Controls.Add(this.dataGridViewInStat_GVE);
             this.Controls.Add(this.chartDiag_GVE);
             this.Controls.Add(this.textBoxSredOZU_GVE);
@@ -151,5 +175,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDiag_GVE;
         private System.Windows.Forms.DataGridView dataGridViewInStat_GVE;
         private System.Windows.Forms.OpenFileDialog openFileDialogStat_GVE;
+        private System.Windows.Forms.Button buttonBigYadra_GVE;
+        private System.Windows.Forms.TextBox textBoxYadra_GVE;
     }
 }

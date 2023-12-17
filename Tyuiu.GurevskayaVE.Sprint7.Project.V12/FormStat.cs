@@ -112,5 +112,25 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             }
             
         }
+
+        private void buttonBigYadra_GVE_Click(object sender, EventArgs e)
+        {
+            int maxNumber = int.MinValue;
+            foreach (DataGridViewRow row in dataGridViewInStat_GVE.Rows)
+            {
+                if (row.Cells["Количество ядер"].Value != null)
+                {
+                    int currentValue;
+                    if (int.TryParse(row.Cells["Количество ядер"].Value.ToString(), out currentValue))
+                    {
+                        if (currentValue > maxNumber)
+                        {
+                            maxNumber = currentValue;
+                        }
+                    }
+                }
+            }
+            textBoxYadra_GVE.Text = Convert.ToString(maxNumber) + ;
+        }
     }
 }
