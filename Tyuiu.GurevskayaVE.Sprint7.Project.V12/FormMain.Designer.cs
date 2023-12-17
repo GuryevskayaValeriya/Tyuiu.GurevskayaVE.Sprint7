@@ -36,6 +36,8 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.saveFileDialog_GVE = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog_GVE = new System.Windows.Forms.OpenFileDialog();
             this.toolTip_GVE = new System.Windows.Forms.ToolTip(this.components);
+            this.buttonOpen_GVE = new System.Windows.Forms.Button();
+            this.buttonInfo_GVE = new System.Windows.Forms.Button();
             this.buttonStat_GVE = new System.Windows.Forms.Button();
             this.buttonSortAlp_GVE = new System.Windows.Forms.Button();
             this.buttonSortData_GVE = new System.Windows.Forms.Button();
@@ -43,10 +45,8 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxFind_GVE = new System.Windows.Forms.TextBox();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.buttonFirma_GVE = new System.Windows.Forms.Button();
-            this.buttonOpen_GVE = new System.Windows.Forms.Button();
-            this.buttonInfo_GVE = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelLeft.SuspendLayout();
             this.groupBoxIn_GVE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIn_GVE)).BeginInit();
@@ -89,15 +89,46 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             this.openFileDialog_GVE.FileName = "openFileDialog1";
             // 
+            // buttonOpen_GVE
+            // 
+            this.buttonOpen_GVE.BackColor = System.Drawing.Color.Transparent;
+            this.buttonOpen_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOpen_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.folder_add;
+            this.buttonOpen_GVE.Location = new System.Drawing.Point(13, 13);
+            this.buttonOpen_GVE.Name = "buttonOpen_GVE";
+            this.buttonOpen_GVE.Size = new System.Drawing.Size(75, 75);
+            this.buttonOpen_GVE.TabIndex = 1;
+            this.toolTip_GVE.SetToolTip(this.buttonOpen_GVE, "Открыть файл");
+            this.buttonOpen_GVE.UseVisualStyleBackColor = false;
+            this.buttonOpen_GVE.Click += new System.EventHandler(this.buttonOpen_GVE_Click);
+            this.buttonOpen_GVE.MouseEnter += new System.EventHandler(this.buttonOpen_GVE_MouseEnter);
+            // 
+            // buttonInfo_GVE
+            // 
+            this.buttonInfo_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonInfo_GVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInfo_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.information;
+            this.buttonInfo_GVE.Location = new System.Drawing.Point(1027, 12);
+            this.buttonInfo_GVE.Name = "buttonInfo_GVE";
+            this.buttonInfo_GVE.Size = new System.Drawing.Size(75, 75);
+            this.buttonInfo_GVE.TabIndex = 0;
+            this.toolTip_GVE.SetToolTip(this.buttonInfo_GVE, "Информация о программе");
+            this.buttonInfo_GVE.UseVisualStyleBackColor = true;
+            this.buttonInfo_GVE.Click += new System.EventHandler(this.buttonInfo_GVE_Click);
+            this.buttonInfo_GVE.MouseEnter += new System.EventHandler(this.buttonInfo_GVE_MouseEnter);
+            // 
             // buttonStat_GVE
             // 
             this.buttonStat_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonStat_GVE.BackColor = System.Drawing.SystemColors.Desktop;
+            this.buttonStat_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonStat_GVE.Location = new System.Drawing.Point(972, 145);
             this.buttonStat_GVE.Name = "buttonStat_GVE";
             this.buttonStat_GVE.Size = new System.Drawing.Size(130, 60);
             this.buttonStat_GVE.TabIndex = 2;
             this.buttonStat_GVE.Text = "Статистика";
+            this.toolTip_GVE.SetToolTip(this.buttonStat_GVE, "Открыть окно со статистикой");
             this.buttonStat_GVE.UseVisualStyleBackColor = false;
             this.buttonStat_GVE.Click += new System.EventHandler(this.buttonStat_GVE_Click);
             // 
@@ -105,6 +136,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             this.buttonSortAlp_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSortAlp_GVE.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.buttonSortAlp_GVE.Cursor = System.Windows.Forms.Cursors.PanNorth;
             this.buttonSortAlp_GVE.Location = new System.Drawing.Point(972, 229);
             this.buttonSortAlp_GVE.Name = "buttonSortAlp_GVE";
             this.buttonSortAlp_GVE.Size = new System.Drawing.Size(130, 60);
@@ -117,6 +149,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             this.buttonSortData_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSortData_GVE.BackColor = System.Drawing.Color.HotPink;
+            this.buttonSortData_GVE.Cursor = System.Windows.Forms.Cursors.PanSouth;
             this.buttonSortData_GVE.Location = new System.Drawing.Point(972, 295);
             this.buttonSortData_GVE.Name = "buttonSortData_GVE";
             this.buttonSortData_GVE.Size = new System.Drawing.Size(130, 60);
@@ -129,12 +162,14 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             this.buttonSave_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave_GVE.BackColor = System.Drawing.Color.Pink;
+            this.buttonSave_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSave_GVE.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSave_GVE.Location = new System.Drawing.Point(955, 536);
             this.buttonSave_GVE.Name = "buttonSave_GVE";
             this.buttonSave_GVE.Size = new System.Drawing.Size(147, 71);
             this.buttonSave_GVE.TabIndex = 5;
             this.buttonSave_GVE.Text = "Сохранить";
+            this.toolTip_GVE.SetToolTip(this.buttonSave_GVE, "Сохранить измененный csv файл");
             this.buttonSave_GVE.UseVisualStyleBackColor = false;
             this.buttonSave_GVE.Click += new System.EventHandler(this.buttonSave_GVE_Click);
             // 
@@ -168,47 +203,24 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.panelTop.Size = new System.Drawing.Size(1114, 127);
             this.panelTop.TabIndex = 0;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // buttonFirma_GVE
             // 
             this.buttonFirma_GVE.BackColor = System.Drawing.Color.MistyRose;
+            this.buttonFirma_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonFirma_GVE.Location = new System.Drawing.Point(845, 12);
             this.buttonFirma_GVE.Name = "buttonFirma_GVE";
             this.buttonFirma_GVE.Size = new System.Drawing.Size(162, 39);
             this.buttonFirma_GVE.TabIndex = 3;
             this.buttonFirma_GVE.Text = "Открыть фирмы";
+            this.toolTip_GVE.SetToolTip(this.buttonFirma_GVE, "Открыть окно с фирмами");
             this.buttonFirma_GVE.UseVisualStyleBackColor = false;
             this.buttonFirma_GVE.Click += new System.EventHandler(this.buttonFirma_GVE_Click);
             // 
-            // buttonOpen_GVE
+            // contextMenuStrip1
             // 
-            this.buttonOpen_GVE.BackColor = System.Drawing.Color.Transparent;
-            this.buttonOpen_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.folder_add;
-            this.buttonOpen_GVE.Location = new System.Drawing.Point(13, 13);
-            this.buttonOpen_GVE.Name = "buttonOpen_GVE";
-            this.buttonOpen_GVE.Size = new System.Drawing.Size(75, 75);
-            this.buttonOpen_GVE.TabIndex = 1;
-            this.toolTip_GVE.SetToolTip(this.buttonOpen_GVE, "Открыть файл");
-            this.buttonOpen_GVE.UseVisualStyleBackColor = false;
-            this.buttonOpen_GVE.Click += new System.EventHandler(this.buttonOpen_GVE_Click);
-            // 
-            // buttonInfo_GVE
-            // 
-            this.buttonInfo_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonInfo_GVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonInfo_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.information;
-            this.buttonInfo_GVE.Location = new System.Drawing.Point(1027, 12);
-            this.buttonInfo_GVE.Name = "buttonInfo_GVE";
-            this.buttonInfo_GVE.Size = new System.Drawing.Size(75, 75);
-            this.buttonInfo_GVE.TabIndex = 0;
-            this.toolTip_GVE.SetToolTip(this.buttonInfo_GVE, "Информация о программе");
-            this.buttonInfo_GVE.UseVisualStyleBackColor = true;
-            this.buttonInfo_GVE.Click += new System.EventHandler(this.buttonInfo_GVE_Click);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // FormMain
             // 

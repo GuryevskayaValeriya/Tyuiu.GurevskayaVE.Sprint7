@@ -115,6 +115,14 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         {
             this.dataGridViewIn_GVE.Sort(this.dataGridViewIn_GVE.Columns["Дата выпуска"], ListSortDirection.Ascending);
         }
+        private void buttonInfo_GVE_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_GVE.ToolTipTitle = "Справка";
+        }
+        private void buttonOpen_GVE_MouseEnter(object sender, EventArgs e)
+        {
+            toolTip_GVE.ToolTipTitle = "Открыть файл";
+        }
 
         private void buttonSave_GVE_Click(object sender, EventArgs e)
         {

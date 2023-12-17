@@ -33,13 +33,13 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panelLeft_GVE = new System.Windows.Forms.Panel();
+            this.buttonBigYadra_GVE = new System.Windows.Forms.Button();
             this.buttonDiag_GVE = new System.Windows.Forms.Button();
             this.buttonSredOZU_GVE = new System.Windows.Forms.Button();
             this.textBoxSredOZU_GVE = new System.Windows.Forms.TextBox();
             this.chartDiag_GVE = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridViewInStat_GVE = new System.Windows.Forms.DataGridView();
             this.openFileDialogStat_GVE = new System.Windows.Forms.OpenFileDialog();
-            this.buttonBigYadra_GVE = new System.Windows.Forms.Button();
             this.textBoxYadra_GVE = new System.Windows.Forms.TextBox();
             this.panelLeft_GVE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartDiag_GVE)).BeginInit();
@@ -57,9 +57,22 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.panelLeft_GVE.Size = new System.Drawing.Size(134, 605);
             this.panelLeft_GVE.TabIndex = 0;
             // 
+            // buttonBigYadra_GVE
+            // 
+            this.buttonBigYadra_GVE.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.buttonBigYadra_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBigYadra_GVE.Location = new System.Drawing.Point(12, 452);
+            this.buttonBigYadra_GVE.Name = "buttonBigYadra_GVE";
+            this.buttonBigYadra_GVE.Size = new System.Drawing.Size(105, 98);
+            this.buttonBigYadra_GVE.TabIndex = 2;
+            this.buttonBigYadra_GVE.Text = "Самое большое количество ядер";
+            this.buttonBigYadra_GVE.UseVisualStyleBackColor = false;
+            this.buttonBigYadra_GVE.Click += new System.EventHandler(this.buttonBigYadra_GVE_Click);
+            // 
             // buttonDiag_GVE
             // 
             this.buttonDiag_GVE.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonDiag_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDiag_GVE.Location = new System.Drawing.Point(12, 215);
             this.buttonDiag_GVE.Name = "buttonDiag_GVE";
             this.buttonDiag_GVE.Size = new System.Drawing.Size(105, 94);
@@ -71,6 +84,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // buttonSredOZU_GVE
             // 
             this.buttonSredOZU_GVE.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.buttonSredOZU_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonSredOZU_GVE.Font = new System.Drawing.Font("Corbel", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSredOZU_GVE.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonSredOZU_GVE.Location = new System.Drawing.Point(12, 12);
@@ -122,17 +136,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // openFileDialogStat_GVE
             // 
             this.openFileDialogStat_GVE.FileName = "openFileDialog1";
-            // 
-            // buttonBigYadra_GVE
-            // 
-            this.buttonBigYadra_GVE.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.buttonBigYadra_GVE.Location = new System.Drawing.Point(12, 452);
-            this.buttonBigYadra_GVE.Name = "buttonBigYadra_GVE";
-            this.buttonBigYadra_GVE.Size = new System.Drawing.Size(105, 98);
-            this.buttonBigYadra_GVE.TabIndex = 2;
-            this.buttonBigYadra_GVE.Text = "Самое большое количество ядер";
-            this.buttonBigYadra_GVE.UseVisualStyleBackColor = false;
-            this.buttonBigYadra_GVE.Click += new System.EventHandler(this.buttonBigYadra_GVE_Click);
             // 
             // textBoxYadra_GVE
             // 

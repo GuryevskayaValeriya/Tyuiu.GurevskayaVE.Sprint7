@@ -130,7 +130,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
                     }
                 }
             }
-            textBoxYadra_GVE.Text = Convert.ToString(maxNumber) + ;
+            textBoxYadra_GVE.Text = Convert.ToString(maxNumber);
         }
     }
 }
