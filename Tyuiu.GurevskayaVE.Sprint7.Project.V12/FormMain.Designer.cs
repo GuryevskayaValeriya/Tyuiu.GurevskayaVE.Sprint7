@@ -39,13 +39,13 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.buttonOpen_GVE = new System.Windows.Forms.Button();
             this.buttonInfo_GVE = new System.Windows.Forms.Button();
             this.buttonStat_GVE = new System.Windows.Forms.Button();
+            this.buttonSave_GVE = new System.Windows.Forms.Button();
+            this.buttonFirma_GVE = new System.Windows.Forms.Button();
             this.buttonSortAlp_GVE = new System.Windows.Forms.Button();
             this.buttonSortData_GVE = new System.Windows.Forms.Button();
-            this.buttonSave_GVE = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxFind_GVE = new System.Windows.Forms.TextBox();
             this.panelTop = new System.Windows.Forms.Panel();
-            this.buttonFirma_GVE = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelLeft.SuspendLayout();
             this.groupBoxIn_GVE.SuspendLayout();
@@ -132,6 +132,34 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.buttonStat_GVE.UseVisualStyleBackColor = false;
             this.buttonStat_GVE.Click += new System.EventHandler(this.buttonStat_GVE_Click);
             // 
+            // buttonSave_GVE
+            // 
+            this.buttonSave_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSave_GVE.BackColor = System.Drawing.Color.Pink;
+            this.buttonSave_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSave_GVE.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave_GVE.Location = new System.Drawing.Point(955, 536);
+            this.buttonSave_GVE.Name = "buttonSave_GVE";
+            this.buttonSave_GVE.Size = new System.Drawing.Size(147, 71);
+            this.buttonSave_GVE.TabIndex = 5;
+            this.buttonSave_GVE.Text = "Сохранить";
+            this.toolTip_GVE.SetToolTip(this.buttonSave_GVE, "Сохранить измененный csv файл");
+            this.buttonSave_GVE.UseVisualStyleBackColor = false;
+            this.buttonSave_GVE.Click += new System.EventHandler(this.buttonSave_GVE_Click);
+            // 
+            // buttonFirma_GVE
+            // 
+            this.buttonFirma_GVE.BackColor = System.Drawing.Color.MistyRose;
+            this.buttonFirma_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFirma_GVE.Location = new System.Drawing.Point(845, 12);
+            this.buttonFirma_GVE.Name = "buttonFirma_GVE";
+            this.buttonFirma_GVE.Size = new System.Drawing.Size(162, 39);
+            this.buttonFirma_GVE.TabIndex = 3;
+            this.buttonFirma_GVE.Text = "Открыть фирмы";
+            this.toolTip_GVE.SetToolTip(this.buttonFirma_GVE, "Открыть окно с фирмами");
+            this.buttonFirma_GVE.UseVisualStyleBackColor = false;
+            this.buttonFirma_GVE.Click += new System.EventHandler(this.buttonFirma_GVE_Click);
+            // 
             // buttonSortAlp_GVE
             // 
             this.buttonSortAlp_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -157,21 +185,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.buttonSortData_GVE.Text = "Отсортировать по году выпуска";
             this.buttonSortData_GVE.UseVisualStyleBackColor = false;
             this.buttonSortData_GVE.Click += new System.EventHandler(this.buttonSortData_GVE_Click);
-            // 
-            // buttonSave_GVE
-            // 
-            this.buttonSave_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSave_GVE.BackColor = System.Drawing.Color.Pink;
-            this.buttonSave_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSave_GVE.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave_GVE.Location = new System.Drawing.Point(955, 536);
-            this.buttonSave_GVE.Name = "buttonSave_GVE";
-            this.buttonSave_GVE.Size = new System.Drawing.Size(147, 71);
-            this.buttonSave_GVE.TabIndex = 5;
-            this.buttonSave_GVE.Text = "Сохранить";
-            this.toolTip_GVE.SetToolTip(this.buttonSave_GVE, "Сохранить измененный csv файл");
-            this.buttonSave_GVE.UseVisualStyleBackColor = false;
-            this.buttonSave_GVE.Click += new System.EventHandler(this.buttonSave_GVE_Click);
             // 
             // groupBox1
             // 
@@ -202,19 +215,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1114, 127);
             this.panelTop.TabIndex = 0;
-            // 
-            // buttonFirma_GVE
-            // 
-            this.buttonFirma_GVE.BackColor = System.Drawing.Color.MistyRose;
-            this.buttonFirma_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonFirma_GVE.Location = new System.Drawing.Point(845, 12);
-            this.buttonFirma_GVE.Name = "buttonFirma_GVE";
-            this.buttonFirma_GVE.Size = new System.Drawing.Size(162, 39);
-            this.buttonFirma_GVE.TabIndex = 3;
-            this.buttonFirma_GVE.Text = "Открыть фирмы";
-            this.toolTip_GVE.SetToolTip(this.buttonFirma_GVE, "Открыть окно с фирмами");
-            this.buttonFirma_GVE.UseVisualStyleBackColor = false;
-            this.buttonFirma_GVE.Click += new System.EventHandler(this.buttonFirma_GVE_Click);
             // 
             // contextMenuStrip1
             // 

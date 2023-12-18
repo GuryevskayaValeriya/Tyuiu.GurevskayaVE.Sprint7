@@ -20,10 +20,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         }
 
-        static string openFilePath;
-        static int rows;
-        static int colums;
-
         //метод чтения данных из файла
         private DataTable ReadCSVFile(string pathToCsvFile)
         {
