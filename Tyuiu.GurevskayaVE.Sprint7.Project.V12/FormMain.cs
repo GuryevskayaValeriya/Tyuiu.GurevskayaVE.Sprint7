@@ -19,63 +19,66 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             InitializeComponent();
 
         }
-
+        DataService ds = new DataService();
         //метод чтения данных из файла
-        private DataTable ReadCSVFile(string pathToCsvFile)
+        public static string[,] LoadFromFileData(string filePath)
         {
-            //создаём таблицу
-            DataTable dt = new DataTable();
-            //создаём колонки
-            DataColumn colIVM;
-            colIVM = new DataColumn("ЭВМ", typeof(String));
-            DataColumn colName;
-            colName = new DataColumn("Фирма", typeof(String));
-            DataColumn colProc;
-            colProc = new DataColumn("Процессор", typeof(String));
-            DataColumn colYAD;
-            colYAD = new DataColumn("Количество ядер", typeof(Int32));
-            DataColumn colOZ;
-            colOZ = new DataColumn("Объем ОЗУ (ГБ)", typeof(Int32));
-            DataColumn colDIAG;
-            colDIAG = new DataColumn("Диагональ", typeof(Double));
-            DataColumn colYear;
-            colYear = new DataColumn("Дата выпуска", typeof(Int32));
-            //добавляем колонки в таблицу
-            dt.Columns.AddRange(new DataColumn[] { colIVM, colName, colProc, colYAD, colOZ, colDIAG, colYear });
-            try
+            string fileData = File.ReadAllText(filePath);
+            fileData = fileData.Replace('\n', '\r');
+            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            int rows = lines.Length;
+            int columns = lines[0].Split(';').Length;
+            string[,] arrayValues = new string[rows, columns];
+
+            for (int r = 0; r < rows; r++)
             {
-                DataRow dr = null;
-                string[] ivmValues = null;
-                string[] ivm = File.ReadAllLines(pathToCsvFile);
-                for (int i = 0; i < ivm.Length; i++)
+                string[] line_r = lines[r].Split(';');
+                for (int c = 0; c < columns; c++)
                 {
-                    if (!String.IsNullOrEmpty(ivm[i]))
-                    {
-                        ivmValues = ivm[i].Split(';');
-                        //создаём новую строку
-                        dr = dt.NewRow();
-                        dr["ЭВМ"] = ivmValues[0];
-                        dr["Фирма"] = ivmValues[1];
-                        dr["Процессор"] = ivmValues[2];
-                        dr["Количество ядер"] = int.Parse(ivmValues[3]);
-                        dr["Объем ОЗУ (ГБ)"] = int.Parse(ivmValues[4]);
-                        dr["Диагональ"] = Double.Parse(ivmValues[5]);
-                        dr["Дата выпуска"] = int.Parse(ivmValues[6]);
-                        //добавляем строку в таблицу
-                        dt.Rows.Add(dr);
-                    }
+                    arrayValues[r, c] = line_r[c];
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            return dt;
-        }
 
+            return arrayValues;
+        }
+        private void LoadDataIntoDataGridView(string filePath)
+        {
+            // загружаем данные из файла с помощью метода LoadFromFileData
+            string[,] dataArray = LoadFromFileData(filePath);
+
+            // очищаем DataGridView перед загрузкой новых данных
+            dataGridViewIn_GVE.Rows.Clear();
+            dataGridViewIn_GVE.Columns.Clear();
+
+            // добавляем столбцы в DataGridView
+            for (int i = 0; i < dataArray.GetLength(1); i++)
+            {
+                dataGridViewIn_GVE.Columns.Add("", dataArray[0, i]);
+            }
+
+            // добавляем строки с данными из CSV файла
+            for (int i = 1; i < dataArray.GetLength(0); i++)
+            {
+                List<string> rowData = new List<string>();
+                for (int j = 0; j < dataArray.GetLength(1); j++)
+                {
+                    rowData.Add(dataArray[i, j]);
+                }
+                dataGridViewIn_GVE.Rows.Add(rowData.ToArray());
+            }
+        }
         private void buttonOpen_GVE_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_GVE.DataSource = ReadCSVFile(@"C:\Users\ВАЛЕРИЯ 2004\source\repos\Tyuiu.GurevskayaVE.Sprint7\Tyuiu.GurevskayaVE.Sprint7.Project.V12\bin\Debug\InPutEC_Sprint7.csv");
+            // получаем путь к файлу с помощью диалогового окна открытия файла
+            OpenFileDialog openFileDialog_GVE = new OpenFileDialog();
+            openFileDialog_GVE.Filter = "csv Files|*.csv"; // фильтр для отображения только csv файлов
+            if (openFileDialog_GVE.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = openFileDialog_GVE.FileName;
+
+                // загружаем данные в DataGridView с помощью метода LoadDataIntoDataGridView
+                LoadDataIntoDataGridView(filePath);
+            }
         }
 
         private void buttonInfo_GVE_Click(object sender, EventArgs e)
@@ -104,12 +107,12 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         private void buttonSortAlp_GVE_Click(object sender, EventArgs e)
         {
-            this.dataGridViewIn_GVE.Sort(this.dataGridViewIn_GVE.Columns["ЭВМ"], ListSortDirection.Ascending);
+            dataGridViewIn_GVE.Sort(dataGridViewIn_GVE.Columns[0], ListSortDirection.Ascending);
         }
 
         private void buttonSortData_GVE_Click(object sender, EventArgs e)
         {
-            this.dataGridViewIn_GVE.Sort(this.dataGridViewIn_GVE.Columns["Дата выпуска"], ListSortDirection.Ascending);
+            dataGridViewIn_GVE.Sort(dataGridViewIn_GVE.Columns[6], ListSortDirection.Ascending); 
         }
         private void buttonInfo_GVE_MouseEnter(object sender, EventArgs e)
         {
