@@ -154,7 +154,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             int rows = dataGridViewIn_GVE.RowCount;
             int columns = dataGridViewIn_GVE.ColumnCount;
 
-            string str = "";
+            string str = "Название;Фирма;Процессор;Количество ядер;Объем ОЗУ (ГБ);Диагональ;Дата выпуска\n";
             for (int i = 0; i < rows-1; i++)
             {
                 for (int j = 0; j < columns; j++)
