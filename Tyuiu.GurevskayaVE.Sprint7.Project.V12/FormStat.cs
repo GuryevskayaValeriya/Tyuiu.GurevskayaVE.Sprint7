@@ -72,7 +72,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             LoadDataIntoDataGridView(filePath);
         }
 
-
         DataService ds = new DataService();
         private void buttonSredOZU_GVE_Click(object sender, EventArgs e)
         {
