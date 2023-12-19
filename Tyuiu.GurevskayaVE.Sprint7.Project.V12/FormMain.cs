@@ -20,6 +20,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         }
         DataService ds = new DataService();
+
         //метод чтения данных из файла
         public static string[,] LoadFromFileData(string filePath)
         {
@@ -94,7 +95,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
             foreach (DataGridViewRow row in dataGridViewIn_GVE.Rows)
             {
-                if (row.IsNewRow) continue; // Пропускаем недобавленные строки
+                if (row.IsNewRow) continue; // пропускаем недобавленные строки
 
                 bool found = false;
 

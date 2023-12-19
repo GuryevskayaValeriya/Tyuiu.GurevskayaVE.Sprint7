@@ -23,12 +23,12 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12.Lib
         public double MaxYadra(string[,] path)
         {
             double max = 0;
-            int columnIndex = 3; // Номер столбца
+            int columnIndex = 3; 
             for (int i = 1; i < path.GetLength(0); i++)
             {
-                if (Convert.ToDouble(path[i, columnIndex]) > max) // Если текущий элемент больше максимального
+                if (Convert.ToDouble(path[i, columnIndex]) > max) 
                 {
-                    max = Convert.ToDouble(path[i, columnIndex]); // Обновляем максимальное значение
+                    max = Convert.ToDouble(path[i, columnIndex]);
                 }
             }
             return max;
