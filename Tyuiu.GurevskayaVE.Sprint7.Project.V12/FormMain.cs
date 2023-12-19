@@ -86,16 +86,28 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             FormAbout formabout = new FormAbout();
             formabout.ShowDialog();
         }
+        
 
         private void textBoxFind_GVE_TextChanged(object sender, EventArgs e)
         {
-            try
+            string searchValue = textBoxFind_GVE.Text.ToLower();
+
+            foreach (DataGridViewRow row in dataGridViewIn_GVE.Rows)
             {
-                (dataGridViewIn_GVE.DataSource as DataTable).DefaultView.RowFilter = $"ЭВМ LIKE '%{textBoxFind_GVE.Text}%'";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                if (row.IsNewRow) continue; // Пропускаем недобавленные строки
+
+                bool found = false;
+
+                for (int j = 0; j < dataGridViewIn_GVE.Columns.Count; j++)
+                {
+                    if (row.Cells[j].Value != null && row.Cells[j].Value.ToString().ToLower().Contains(searchValue))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                row.Visible = found;
             }
         }
 
@@ -142,7 +154,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             int columns = dataGridViewIn_GVE.ColumnCount;
 
             string str = "";
-            for (int i = 0; i < rows; i++)
+            for (int i = 0; i < rows-1; i++)
             {
                 for (int j = 0; j < columns; j++)
                 {
