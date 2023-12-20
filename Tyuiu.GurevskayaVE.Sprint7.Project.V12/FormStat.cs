@@ -73,12 +73,15 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         }
 
         DataService ds = new DataService();
+
+        //счет с помощьюы lib
         private void buttonSredOZU_GVE_Click(object sender, EventArgs e)
         {
             string[,] dataArray = LoadFromFileData(filePath);
             textBoxSredOZU_GVE.Text = Convert.ToString(ds.SredOZU(dataArray));
         }
 
+        //input диагоналей в chart
         private void buttonDiag_GVE_Click(object sender, EventArgs e)
         {
             chartDiag_GVE.Series[0].Points.Clear();
@@ -96,6 +99,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             
         }
 
+        //счет с lib
         private void buttonBigYadra_GVE_Click(object sender, EventArgs e)
         {
             string[,] dataArray = LoadFromFileData(filePath);

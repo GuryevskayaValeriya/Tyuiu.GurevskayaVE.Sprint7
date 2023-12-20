@@ -13,7 +13,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 {
     public partial class FormFirma : Form
     {
-
+        // еще один метод чтения файла
         private DataTable ReadCSVFile(string pathToCsvFile)
         {
             //создаём таблицу
@@ -63,8 +63,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             dataGridViewInFirma_GVE.DataSource = ReadCSVFile(@"C:\Users\ВАЛЕРИЯ 2004\source\repos\Tyuiu.GurevskayaVE.Sprint7\Tyuiu.GurevskayaVE.Sprint7.Project.V12\bin\Debug\InPutFirma_Sprint7.csv");
 
         }
-
-        
 
         private void buttonBrowser_GVE_Click(object sender, EventArgs e)
         {

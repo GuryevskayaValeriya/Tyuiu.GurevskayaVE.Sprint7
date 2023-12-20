@@ -16,9 +16,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         {
             InitializeComponent();
         }
-
-        
-
         private void radioButtonApple_GVE_CheckedChanged(object sender, EventArgs e)
         {
             string url = "https://ru.wikipedia.org/wiki/Apple"; 
@@ -54,8 +51,6 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             string url = "https://ru.wikipedia.org/wiki/Honor_(%D0%B1%D1%80%D0%B5%D0%BD%D0%B4)"; 
             webBrowser_GVE.Navigate(url);
         }
-
-       
 
         private void radioButtonMSI_GVE_CheckedChanged(object sender, EventArgs e)
         {

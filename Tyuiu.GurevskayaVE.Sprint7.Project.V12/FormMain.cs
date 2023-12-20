@@ -70,7 +70,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         }
         private void buttonOpen_GVE_Click(object sender, EventArgs e)
         {
-            // получаем путь к файлу с помощью диалогового окна открытия файла
+            // получаем путь к файлу с помощью окна
             OpenFileDialog openFileDialog_GVE = new OpenFileDialog();
             openFileDialog_GVE.Filter = "csv Files|*.csv"; // фильтр для отображения только csv файлов
             if (openFileDialog_GVE.ShowDialog() == DialogResult.OK)
@@ -89,13 +89,14 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
         }
         
 
+        //поиск по таблице
         private void textBoxFind_GVE_TextChanged(object sender, EventArgs e)
         {
-            string searchValue = textBoxFind_GVE.Text.ToLower();
+            string searchValue = textBoxFind_GVE.Text.ToLower(); //регистронезависимость
 
             foreach (DataGridViewRow row in dataGridViewIn_GVE.Rows)
             {
-                if (row.IsNewRow) continue; // пропускаем недобавленные строки
+                if (row.IsNewRow) continue; // 
 
                 bool found = false;
 
@@ -108,7 +109,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
                     }
                 }
 
-                row.Visible = found;
+                row.Visible = found; // видимость\невидимость строк
             }
         }
 
@@ -120,12 +121,12 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
         private void buttonSortAlp_GVE_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_GVE.Sort(dataGridViewIn_GVE.Columns[0], ListSortDirection.Ascending);
+            dataGridViewIn_GVE.Sort(dataGridViewIn_GVE.Columns[0], ListSortDirection.Ascending); //сортировка названий
         }
 
         private void buttonSortData_GVE_Click(object sender, EventArgs e)
         {
-            dataGridViewIn_GVE.Sort(dataGridViewIn_GVE.Columns[6], ListSortDirection.Ascending); 
+            dataGridViewIn_GVE.Sort(dataGridViewIn_GVE.Columns[6], ListSortDirection.Ascending); //сортировка по году
         }
         private void buttonInfo_GVE_MouseEnter(object sender, EventArgs e)
         {
@@ -136,6 +137,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             toolTip_GVE.ToolTipTitle = "Открыть файл";
         }
 
+        //сохранение файла
         private void buttonSave_GVE_Click(object sender, EventArgs e)
         {
             saveFileDialog_GVE.FileName = "OutPutIVM.csv";
@@ -174,7 +176,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
             DialogResult dialogres = MessageBox.Show("Файл " + path + " сохранен успешно!\nОткрыть его в блокноте?", "Сообщение", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-            if (dialogres == DialogResult.Yes)
+            if (dialogres == DialogResult.Yes) //открытие файла
             {
                 System.Diagnostics.Process txt = new System.Diagnostics.Process();
                 txt.StartInfo.FileName = "notepad.exe";
