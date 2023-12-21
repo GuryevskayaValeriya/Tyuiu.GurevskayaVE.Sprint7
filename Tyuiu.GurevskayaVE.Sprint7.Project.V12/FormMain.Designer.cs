@@ -93,6 +93,8 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // 
             this.buttonOpen_GVE.BackColor = System.Drawing.Color.Transparent;
             this.buttonOpen_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonOpen_GVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOpen_GVE.ForeColor = System.Drawing.Color.White;
             this.buttonOpen_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.folder_add;
             this.buttonOpen_GVE.Location = new System.Drawing.Point(13, 13);
             this.buttonOpen_GVE.Name = "buttonOpen_GVE";
@@ -106,23 +108,26 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             // buttonInfo_GVE
             // 
             this.buttonInfo_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo_GVE.BackColor = System.Drawing.Color.WhiteSmoke;
             this.buttonInfo_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonInfo_GVE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonInfo_GVE.Font = new System.Drawing.Font("Microsoft Sans Serif", 1.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonInfo_GVE.Image = global::Tyuiu.GurevskayaVE.Sprint7.Project.V12.Properties.Resources.information;
             this.buttonInfo_GVE.Location = new System.Drawing.Point(1027, 12);
             this.buttonInfo_GVE.Name = "buttonInfo_GVE";
             this.buttonInfo_GVE.Size = new System.Drawing.Size(75, 75);
             this.buttonInfo_GVE.TabIndex = 0;
             this.toolTip_GVE.SetToolTip(this.buttonInfo_GVE, "Информация о программе");
-            this.buttonInfo_GVE.UseVisualStyleBackColor = true;
+            this.buttonInfo_GVE.UseVisualStyleBackColor = false;
             this.buttonInfo_GVE.Click += new System.EventHandler(this.buttonInfo_GVE_Click);
             this.buttonInfo_GVE.MouseEnter += new System.EventHandler(this.buttonInfo_GVE_MouseEnter);
             // 
             // buttonStat_GVE
             // 
             this.buttonStat_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonStat_GVE.BackColor = System.Drawing.SystemColors.Desktop;
+            this.buttonStat_GVE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(213)))));
             this.buttonStat_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStat_GVE.Enabled = false;
             this.buttonStat_GVE.Location = new System.Drawing.Point(972, 145);
             this.buttonStat_GVE.Name = "buttonStat_GVE";
             this.buttonStat_GVE.Size = new System.Drawing.Size(130, 60);
@@ -137,6 +142,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.buttonSave_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSave_GVE.BackColor = System.Drawing.Color.Pink;
             this.buttonSave_GVE.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSave_GVE.Enabled = false;
             this.buttonSave_GVE.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonSave_GVE.Location = new System.Drawing.Point(955, 536);
             this.buttonSave_GVE.Name = "buttonSave_GVE";
@@ -165,6 +171,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.buttonSortAlp_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSortAlp_GVE.BackColor = System.Drawing.Color.PaleVioletRed;
             this.buttonSortAlp_GVE.Cursor = System.Windows.Forms.Cursors.PanNorth;
+            this.buttonSortAlp_GVE.Enabled = false;
             this.buttonSortAlp_GVE.Location = new System.Drawing.Point(972, 229);
             this.buttonSortAlp_GVE.Name = "buttonSortAlp_GVE";
             this.buttonSortAlp_GVE.Size = new System.Drawing.Size(130, 60);
@@ -178,6 +185,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             this.buttonSortData_GVE.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonSortData_GVE.BackColor = System.Drawing.Color.HotPink;
             this.buttonSortData_GVE.Cursor = System.Windows.Forms.Cursors.PanSouth;
+            this.buttonSortData_GVE.Enabled = false;
             this.buttonSortData_GVE.Location = new System.Drawing.Point(972, 295);
             this.buttonSortData_GVE.Name = "buttonSortData_GVE";
             this.buttonSortData_GVE.Size = new System.Drawing.Size(130, 60);

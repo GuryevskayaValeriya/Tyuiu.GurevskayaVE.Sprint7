@@ -80,6 +80,10 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
                 // загружаем данные в DataGridView с помощью метода LoadDataIntoDataGridView
                 LoadDataIntoDataGridView(filePath);
             }
+            buttonSortData_GVE.Enabled = true;
+            buttonSave_GVE.Enabled = true;
+            buttonStat_GVE.Enabled = true;
+            buttonSortAlp_GVE.Enabled = true;
         }
 
         private void buttonInfo_GVE_Click(object sender, EventArgs e)
@@ -96,7 +100,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
 
             foreach (DataGridViewRow row in dataGridViewIn_GVE.Rows)
             {
-                if (row.IsNewRow) continue; // 
+                if (row.IsNewRow) continue; // проверка добавленных строк
 
                 bool found = false;
 
