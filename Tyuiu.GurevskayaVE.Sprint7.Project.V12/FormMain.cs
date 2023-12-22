@@ -19,6 +19,7 @@ namespace Tyuiu.GurevskayaVE.Sprint7.Project.V12
             InitializeComponent();
 
         }
+
         DataService ds = new DataService();
 
         //метод чтения данных из файла
